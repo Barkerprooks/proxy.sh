@@ -54,5 +54,5 @@ ssh -D 8080 -o ConnectTimeout=5 -Nf $proxy_host
 proxy_pid=$(check_process)
 if ! [ -z "${proxy_pid}" ]; then
 	export http_proxy=$proxy_url https_proxy=$proxy_url ftp_proxy=$proxy_url
-	echo '[!] socks5 proxy is now active'
+	echo '[!] SOCKS5 proxy is now active'
 fi
