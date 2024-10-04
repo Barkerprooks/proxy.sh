@@ -22,5 +22,8 @@ Feeling ballsy? go ahead and link the `proxy.sh` script to `/usr/local/bin/proxy
 ```
 sudo ln -s $PWD/proxy.sh /usr/local/bin/proxy.sh
 ```
+## Upcoming
+- support for environment variables ???
+- auto-remove .rc script
 ## Why are you using this?
 If you're on this page you probably already know how to do this stuff. I don't assume anyone will actually use this. I write like it will happen because that way _I_ can look back on this and remember what I was doing.
