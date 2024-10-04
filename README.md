@@ -18,9 +18,9 @@ each environment variable should be set to `socks5://127.0.0.1:8080`, you can ch
 ## System Wide
 If your desktop environment is something like `macos` or `gnome` you can use the URI `socks5://127.0.0.1:8080` under your proxy settings in the SOCKS5 category in order to tunnel _some_ of your traffic through the proxy. You can also manually set up the SOCKS5 proxy on most web browsers like `firefox` or `chrome`.
 ## Installing
-Feeling ballsy? go ahead and copy the `proxy.sh` script to `/usr/local/bin/proxy.sh` so you can access it from anywhere. Make sure to run `update-rc.sh` beforehand so you get the full package.
+Feeling ballsy? go ahead and link the `proxy.sh` script to `/usr/local/bin/proxy.sh` so you can access it from anywhere. Make sure to run `update-rc.sh` beforehand so you get the full package. Make sure you have a final resting place for this repository before running the script below.
 ```
-sudo cp ./proxy.sh /usr/local/bin/proxy.sh
+sudo ln -s $PWD/proxy.sh /usr/local/bin/proxy.sh
 ```
 ## Why are you using this?
 If you're on this page you probably already know how to do this stuff. I don't assume anyone will actually use this. I write like it will happen because that way _I_ can look back on this and remember what I was doing.
