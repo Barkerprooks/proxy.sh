@@ -3,13 +3,13 @@ Just some useful scripts to help me get around things when I need it. For exampl
 ## proxy.sh
 This is just a simple wrapper for a SOCKS5 `ssh` tunnel. It will log into a host via `ssh` with the `-N` flag. spawn a SOCKS5 tunnel on port `8080` with the `-D 8080` option, and backgrounds the process with the `-f` flag. I have it set up in such a way that one could add a default hostname to the script variables and its just a no-args command. Perhaps in the near future I'll add ENV variable support as well.
 ```
+usage ./proxy.sh -h <hostname> -u <username>
 
+    -h/--host: SSH host to tunnel through
+    -u/--user: SSH username for tunnel host (if needed)
 ```
 ## update-rc.sh
-This is a nice thing to have for your shell environment because it automatically detects if the SOCKS5 proxy is running and will set the relevant `env` variables without you needing to remember on each shell opened. Important thing to note about this: if you are running something with `sudo` you will need to run commands with the `-E` flag to keep the proxy environment variables from your session. you can uncomment a line of the added `.rc` script in order to alias `sudo` with this so you don't have to remember.
-```
-
-```
+You just need to run this once and it will be in your `.rc` file forever. This is a nice thing to have for your shell environment because it automatically detects if the SOCKS5 proxy is running and will set the relevant `env` variables without you needing to remember on each shell opened. Important thing to note about this: if you are running something with `sudo` you will need to run commands with the `-E` flag to keep the proxy environment variables from your session. you can uncomment a line of the added `.rc` script in order to alias `sudo` with this so you don't have to remember.
 ### Affected ENV variables
 - `http_proxy`
 - `https_proxy`
