@@ -9,6 +9,8 @@ function echo_rc_script() {
 	echo "if ! [ -z \"\${proxy_pid}\" ]; then"
 	echo "	proxy_url='socks5://127.0.0.1:8080'"
 	echo "	export http_proxy=\$proxy_url https_proxy=\$proxy_url ftp_proxy=\$proxy_url"
+	echo "	# uncomment the line below if you want sudo to be aliased"
+	echo "	# alias sudo='sudo -E'"
 	echo "	# uncomment the line below if you would like the shell to alert you on startup"
 	echo "	# echo '[!] socks5 proxy is active'"
 	echo "fi"
