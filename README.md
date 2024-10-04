@@ -11,10 +11,10 @@ usage ./proxy.sh -h <hostname> -u <username>
 ## update-rc.sh
 You just need to run this once and it will be in your `.rc` file forever. This is a nice thing to have for your shell environment because it automatically detects if the SOCKS5 proxy is running and will set the relevant `env` variables without you needing to remember on each shell opened. Important thing to note about this: if you are running something with `sudo` you will need to run commands with the `-E` flag to keep the proxy environment variables from your session. you can uncomment a line of the added `.rc` script in order to alias `sudo` with this so you don't have to remember.
 ### Affected ENV variables
+each environment variable should be set to `socks5://127.0.0.1:8080`, you can check this with `echo $http_proxy`.
 - `http_proxy`
 - `https_proxy`
 - `ftp_proxy`
-each environment variable should be set to `socks5://127.0.0.1:8080`, you can check this with `echo $http_proxy`.
 ## System Wide
 If your desktop environment is something like `macos` or `gnome` you can use the URI `socks5://127.0.0.1:8080` under your proxy settings in the SOCKS5 category in order to tunnel _some_ of your traffic through the proxy. You can also manually set up the SOCKS5 proxy on most web browsers like `firefox` or `chrome`.
 ## Installing
