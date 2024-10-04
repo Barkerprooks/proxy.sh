@@ -1,7 +1,7 @@
 # VPS Proxy
 Just some useful scripts to help me get around things when I need it. For example my job geo-blocks useful resources such as archlinux.org... or alacritty.org. It's interesting how many open source organizations are hosted overseas. Maybe I should join them over there...
 ## proxy.sh
-This is just a simple wrapper for a SOCKS5 `ssh` tunnel. It will log into a host via `ssh` with the `-N` flag. spawn a SOCKS5 tunnel on port `8080` with the `-D 8080` option, and backgrounds the process with the `-f` flag. I have it set up in such a way that one could add a default hostname to the script variables and its just a no-args command. Perhaps in the near future I'll add ENV variable support as well.
+This is just a simple wrapper for a SOCKS5 `ssh` tunnel. It will log into a host via `ssh` with the `-N` flag. spawn a SOCKS5 tunnel on port `8080` with the `-D 8080` option, and backgrounds the process with the `-f` flag. I have it set up in such a way that one could add a default hostname to the script variables and its just a no-args command. Perhaps in the near future I'll add `env` variable support as well.
 ```
 usage ./proxy.sh -h <hostname> -u <username>
 
